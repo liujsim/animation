@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>rotate</title>
+  <style>
+    html,body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    *{
+      margin:0;
+      padding: 0;
+    }
+    #block {
+       animation: pulse 0.5s cubic-bezier(0.5, 0.5, 0, 1);
+       /* animation-play-state: running; */
+       animation-play-state: paused;
+    }
+    img {
+      height: 100px;
+      width: 100px;
+    }
+    @keyframes pulse {
+      20% {
+        opacity: 0.1;
+        transform: scale(0.7);
+      }
+      25% {
+        opacity: 0.4;
+      }
+      100% {
+        opacity: 0;
+        transform: scale(5);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="block">
+    <img src="./twitter.png" alt="">
+  </div>
+  <script>
+    var deg = 1;
+     block.addEventListener('animationend', function () {
+       console.log('animationend')
+     })
+    block.addEventListener('click', function () {
+      this.style.webkitAnimationPlayState = "running"
+    });
+  </script>
+</body>
+
+</html>
