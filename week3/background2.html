@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>background 缩放动画</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html,body {
+    height: 100%;
+  }
+  body {
+
+  }
+  .bg-img {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    overflow: hidden;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    animation: change 2s linear;
+    animation-fill-mode:forwards;
+    animation-delay: 0s;
+  }
+   @keyframes change {
+      0% {
+        transform: scale(1.1);
+      }
+      100% {
+       transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+ <div class="bg-img">
+   <img src="./background.jpeg" alt="">
+ </div>
+</body>
+</html>
